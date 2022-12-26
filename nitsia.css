@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: "poppins",sans-serif;
+}
+body{
+    background-color: rgb(242, 250, 193);
+    
+}
+.card{
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+}
+.outside,
+.inside{
+  
+    height: 100%;
+    width: 50%;
+    position: absolute; 
+    left: 50.1%;
+}
+.inside{ 
+    background: linear-gradient(to right, white,#ffffff 30);
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    right: 50%;
+}
+.outside{
+    -webkit-transform-style: preserve-3d;
+    transform-style:preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 240s;
+    left: 50%;
+}
+.outside:hover{
+    rotate: 360deg;
+}
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+}
+.front{
+    background-color: white;
+    background-image: url(samia.jpg);
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.back{
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, rgb(234, 150, 150), white 30%);   
+}
+.nitsia{
+    width: 100%;
+    position: absolute;
+    bottom: 30px ;
+}
+.top-layer{
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-image: linear-gradient(
+        transparent 50px,
+        rgb(222, 147, 147) 50px,
+        rgb(154, 226, 165) 60px,
+        transparent 60px,
+    ),
+    url(nitsia.png)
+    radial-gradient(circle at 30px 5px, brown 30px,);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: auto;
+}
+.myPara{
+    color: aqua;
+    text-align: center;   
+}
+.video{
+    align-items: center;
+}
